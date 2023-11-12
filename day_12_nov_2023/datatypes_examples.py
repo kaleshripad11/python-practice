@@ -39,5 +39,5 @@ x, y = y, x
 print("Swapped values of x & y : ", x, y)
 
 # Change the types of variables once they are declared
-y = 10.5    # Initial value of Y was 5, after swapping it became 10 and now we again updated it to float 10.5
-print("Value of 'y' : ",y)
+y = 10.5    # Initial value of Y was 5, after swapping it became 10, and now we again updated it to float 10.5
+print("Value of 'y' : ", y)
