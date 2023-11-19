@@ -31,18 +31,18 @@ lists.clear()
 print(lists)
 
 # Copy lists
-listz = [10, 20.1, "Java", "Year - 2023", ascii("x"), 200, 35.8]
-x = listz.copy()
+list_z = [10, 20.1, "Java", "Year - 2023", ascii("x"), 200, 35.8]
+x = list_z.copy()
 print(x)
 
-# x = list(listz)
-x = listz
+# x = list(list_z)
+x = list()
 print(x)
 
 # Concatenate lists
-print(x+listz)
+print(x+list_z)
 
 # List concatenation using loop
-for i in listz:
+for i in list_z:
     x.append(i)
-print(x)
+print("Items in list 'x' : ", x)
