@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/Users/shripadkale/Documents/Python/Selenium_With_Python/BasicPython/day9_23_nov_2023/package_demo")
+sys.path.append("/day9_24_nov_2023/package_demo")
 
 
 x, y = int(input("Enter First Number : ")), int(input("Enter Second Number : "))

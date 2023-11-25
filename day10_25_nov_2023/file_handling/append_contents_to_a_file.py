@@ -1,0 +1,5 @@
+print("Opening the existing file 'Existing_File.txt' in write mode.....")
+existing_file = open("files/Existing_File1.txt", "a")
+existing_file.write("\nAppending this line to existing file")
+existing_file.close()
+print("Done...")
