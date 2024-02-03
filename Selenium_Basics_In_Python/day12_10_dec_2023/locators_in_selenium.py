@@ -1,15 +1,32 @@
-# Syntax : By.<Locator_Name>, "value"
-# Example : By.CSS_SELECTOR, "input[type='email']"
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import time
 
 driver = webdriver.Chrome()
 driver.maximize_window()
-driver.get("https://only-testing-blog.blogspot.com/2014/01/")
+driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
-print(driver.find_element(By.TAG_NAME, "h3").text) #TextBox
+def login_to_orange_hrm(user,password):
+    driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+    time.sleep(3)
+
+    # Finding element by NAME(name attribute's value)
+    driver.find_element(By.NAME, "username").send_keys(user)
+    driver.find_element(By.NAME, "password").send_keys(password)
+
+    # Finding element by CLASS_NAME(class attribute's value)
+    driver.find_element(By.CLASS_NAME, "orangehrm-login-button").click()
 
 
+login_to_orange_hrm("Admin","admin123")
 
+# Find element by XPATH(xml path to reach desired element on dom)
+time.sleep(3)
+driver.find_element(By.XPATH, "//li[6]/a/span").click()
 
+time.sleep(3)
+driver.find_element(By.CSS_SELECTOR, "input.orangehrm-firstname")
+time.sleep(7)
+# # Ex 2:
+# # Ex 3:
+# # Ex 4:
