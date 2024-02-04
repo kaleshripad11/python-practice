@@ -6,10 +6,9 @@ driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
-def login_to_orange_hrm(user,password):
-    driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
-    time.sleep(3)
 
+def login_to_orange_hrm(user,password):
+    time.sleep(2)
     # Finding element by NAME(name attribute's value)
     driver.find_element(By.NAME, "username").send_keys(user)
     driver.find_element(By.NAME, "password").send_keys(password)
@@ -21,12 +20,12 @@ def login_to_orange_hrm(user,password):
 login_to_orange_hrm("Admin","admin123")
 
 # Find element by XPATH(xml path to reach desired element on dom)
-time.sleep(3)
+time.sleep(2)
 driver.find_element(By.XPATH, "//li[6]/a/span").click()
 
-time.sleep(3)
+time.sleep(2)
 driver.find_element(By.CSS_SELECTOR, "input.orangehrm-firstname")
-time.sleep(7)
+time.sleep(3)
 # # Ex 2:
 # # Ex 3:
 # # Ex 4:
