@@ -23,9 +23,17 @@ login_to_orange_hrm("Admin","admin123")
 time.sleep(2)
 driver.find_element(By.XPATH, "//li[6]/a/span").click()
 
+# Ex 1: CSS_SELECTOR = 'tagName.className'
 time.sleep(2)
-driver.find_element(By.CSS_SELECTOR, "input.orangehrm-firstname")
-time.sleep(3)
-# # Ex 2:
-# # Ex 3:
-# # Ex 4:
+driver.find_element(By.CSS_SELECTOR, "input.orangehrm-firstname").send_keys("John")
+
+time.sleep(2)
+driver.find_element(By.XPATH,"//p[@class='oxd-userdropdown-name']").click()
+
+
+# Find element by CSS_SELECTOR
+# Ex 1: CSS_SELECTOR = "tagName[attribute='value']"
+# Ex 2: CSS_SELECTOR = "tagName#id"
+# Ex 3: CSS_SELECTOR = "tagName#id[attribute='value']"
+# Ex 4: CSS_SELECTOR = "tagName.className"
+# Ex 5: CSS_SELECTOR = "tagName.className[attribute='value']"
