@@ -7,7 +7,7 @@ driver.maximize_window()
 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
 
-def login_to_orange_hrm(user,password):
+def login_to_orange_hrm(user, password):
     time.sleep(2)
     # Finding element by NAME(name attribute's value)
     driver.find_element(By.NAME, "username").send_keys(user)
@@ -17,7 +17,7 @@ def login_to_orange_hrm(user,password):
     driver.find_element(By.CLASS_NAME, "orangehrm-login-button").click()
 
 
-login_to_orange_hrm("Admin","admin123")
+login_to_orange_hrm("Admin", "admin123")
 
 # Find element by XPATH(xml path to reach desired element on dom)
 time.sleep(2)
@@ -28,7 +28,7 @@ time.sleep(2)
 driver.find_element(By.CSS_SELECTOR, "input.orangehrm-firstname").send_keys("John")
 
 time.sleep(2)
-driver.find_element(By.XPATH,"//p[@class='oxd-userdropdown-name']").click()
+driver.find_element(By.XPATH, "//p[@class='oxd-userdropdown-name']").click()
 
 
 # Find element by CSS_SELECTOR
