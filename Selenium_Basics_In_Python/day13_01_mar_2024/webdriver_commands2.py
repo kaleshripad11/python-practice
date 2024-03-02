@@ -1,15 +1,13 @@
 import time
-
 from selenium.webdriver import Chrome, ChromeOptions
 from selenium.webdriver.common.by import By
 
-options = ChromeOptions()
-
 # From selenium 4 web browsers will be closed automatically. To avoid auto close use ChromeOptions class
-options.add_experimental_option("detach", True)
+opt = ChromeOptions()
+opt.add_experimental_option("detach", True)
 
 # Pass ChromeOptions object to webdriver reference. This will not allow browser window to be closed automatically
-driver = Chrome(options=options)
+driver = Chrome(options=opt)
 driver.maximize_window()
 
 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
