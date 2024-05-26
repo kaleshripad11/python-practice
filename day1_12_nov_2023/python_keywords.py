@@ -7,7 +7,7 @@ import keyword as k
 # Note : The keywords may vary as per the python versions.
 
 print(k.kwlist)
-print("Type of 'kwlist' => ",type(k.kwlist))
+print("Type of 'kwlist' =>  ",type(k.kwlist))
 print("Type of 'keyword' => ",type(k))
 
 """
